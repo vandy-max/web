@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen</title>
+</head>
+<body>
+    <h1>Welcome to Canteen</h1>
+    <h2>Menu</h2>
+    <div id="div1">
+    <div>
+    <label for="">Idli-Rs 10</label>
+    <input type="number" name=""id="Idli"></div>
+    <div>
+    <label for="">Dosa-Rs 30</label>
+    <input type="number" name=""id="Dosa"></div>
+    <div>
+    <label for="">Upittu-Rs 40</label>
+    <input type="number" name=""id="Upittu"></div>
+    <div>
+    <label for="">Chapatti-Rs 60</label>
+    <input type="number" name=""id="Chapatti"></div>
+    <div>
+    <label for="">Mudde-Rs 20</label>
+    <input type="number" name=""id="Mudde"></div>
+    <div>
+    <label for="">Pulav-Rs 45</label>
+    <input type="number" name=""id="Pulav"></div>
+    <div>
+    <label for="">Rice bath -Rs 50</label>
+    <input type="number" name=""id="Ricebath">
+    </div>
+    <button onclick="bill()">Submit</button>
+    <p id="res">The total bill </p>
+    </div>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        color: #2c3e50;
+        margin-top: 20px;
+    }
+
+    h2 {
+        color: #34495e;
+        margin-bottom: 20px;
+    }
+
+    #div1 {
+        background-image: url('cab.jpeg');
+        background-size: cover;
+        background-position: center;
+        height: auto;
+        width: 300px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.85);
+    }
+
+    #div1 div {
+        margin-bottom: 12px;
+        text-align: left;
+    }
+
+    label {
+        font-weight: bold;
+        display: inline-block;
+        width: 160px;
+        color:black;
+    }
+
+    input[type="number"] {
+        padding: 4px;
+        width: 60px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #27ae60;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #219150;
+    }
+
+    #res {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        color: maroon;
+    }
+</style>
+
+
+<script>
+    function bill(){
+    var Idli = document.getElementById("Idli").value;
+    var Dosa = document.getElementById("Dosa").value;
+    var Upittu = document.getElementById("Upittu").value;
+    var Chapatti= document.getElementById("Chapatti").value;
+    var Mudde = document.getElementById("Mudde").value;
+    var Pulav= document.getElementById("Pulav").value;
+    var Ricebath = document.getElementById("Ricebath").value;
+    var total = (Idli*10)+(Dosa*30)+(Upittu*40)+(Chapatti*60)+(Mudde*20)+(Pulav*45)+(Ricebath*50);
+    res.innerHTML="Amount to be paid = Rs"+total;
+    }
+</script>
+</body>
+</html>
