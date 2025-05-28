@@ -78,8 +78,8 @@
     <h1>Result Predictor</h1>
     <label for="uname">Your name</label>
     <input type="text" id="uname">
-    <label for="cname">Crush name</label>
-    <input type="text" id="cname">
+    <!--<label for="cname">Crush name</label>
+    <input type="text" id="cname">-->
     <button onclick="per()">Check</button>
     <p id="res"></p>
 </div>
@@ -87,14 +87,10 @@
 <script>
     function per() {
         var uname = document.getElementById("uname").value;
-        var cname = document.getElementById("cname").value;
+       // var cname = document.getElementById("cname").value;//
         var per = Math.floor(Math.random() * 100) + 1;
         var res = document.getElementById("res");
-        if (uname && cname) {
-            res.innerHTML = uname + " ❤️ " + cname + " = " + per + "% match!";
-        } else {
-            res.innerHTML = "Please enter both names!";
-        }
+        
     }
 </script>
 </body>
